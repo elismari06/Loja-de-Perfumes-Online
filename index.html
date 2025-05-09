@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Perfumes Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Estilos adicionais podem ser colocados aqui */
+        .produto-imagem {
+            max-height: 200px;
+            /* Altura máxima para as imagens dos produtos */
+            object-fit: contain;
+            /* Garante que a imagem se ajuste dentro do contêiner */
+        }
+    </style>
+</head>
+
+<body class="bg-yellow-50 font-inter">
+    <header class="bg-yellow-400 text-gray-800 py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold">
+                <span class="bg-white text-yellow-400 px-2 rounded-md">Elô</span> Perfumaria
+            </a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="produto.html" class="hover:text-yellow-200 transition duration-300">Produtos</a></li>
+                    <li><a href="#categorias" class="hover:text-yellow-200 transition duration-300">Categorias</a></li>
+                    <li><a href="#sobre" class="hover:text-yellow-200 transition duration-300">Sobre Nós</a></li>
+                    <li><a href="https://w.app/ovebov" class="hover:text-yellow-200 transition duration-300">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-mobile-button" class="text-gray-800 focus:outline-none" aria-label="Abrir Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <div id="menu-mobile"
+                    class="hidden absolute top-16 right-0 bg-yellow-400 shadow-lg rounded-md py-2 px-4 space-y-3">
+                    <a href="#produtos"
+                        class="block text-gray-800 hover:text-yellow-200 transition duration-300">Produtos</a>
+                    <a href="#categorias"
+                        class="block text-gray-800 hover:text-yellow-200 transition duration-300">Categorias</a>
+                    <a href="#sobre" class="block text-gray-800 hover:text-yellow-200 transition duration-300">Sobre
+                        Nós</a>
+                    <a href="#contato"
+                        class="block text-gray-800 hover:text-yellow-200 transition duration-300">Contato</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-br from-yellow-100 to-orange-100 text-gray-800 py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Encontre o Perfume Perfeito</h2>
+            <p class="text-lg mb-8">Descubra fragrâncias exclusivas que realçam a sua personalidade.</p>
+            <a href="produto.html"
+                class="bg-yellow-500 text-gray-800 py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300 font-semibold">Ver
+                Produtos</a>
+        </div>
+    </section>
+
+    <section id="produtos" class="bg-yellow-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Produtos em Destaque</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialatrai.jpg" alt="Perfume 1" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Essencial Atrai Deo Parfum Feminino
+                        100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 199,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialoud.jpg" alt="Perfume 2" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Oud Deo Parfum Feminino 100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 249,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialsentir.jpg" alt="Perfume 3" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Sentir Feminino Deo Parfum 100 Ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 179,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="produto.html"
+                    class="text-yellow-600 hover:text-yellow-800 transition duration-300 font-semibold">Ver Todos os
+                    Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="categorias" class="bg-yellow-100 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Categorias de Perfumes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">Perfumes Femininos</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">Perfumes Masculinos</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">Perfumes Unissex</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="bg-yellow-50 py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold text-yellow-700 mb-4">Sobre Nós</h2>
+            <p class="text-gray-700 text-lg">
+                Bem-vindo à Elô Perfumaria, sua loja online de perfumes. Nossa missão é oferecer uma seleção
+                exclusiva de fragrâncias de alta qualidade e nacionais, para todos os gostos e estilos.
+                Com anos de experiência no mercado, nos dedicamos a proporcionar uma experiência de compra
+                excepcional, desde a escolha do produto até a entrega em sua casa.
+            </p>
+        </div>
+    </section>
+
+    <section id="contato" class="bg-yellow-100 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Contato</h2>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <form>
+                    <div class="mb-4">
+                        <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
+                        <input type="text" id="nome" name="nome"
+                            class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email"
+                            class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="mensagem" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem"
+                            class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                    <a type="submit"
+                        class="bg-yellow-500 text-gray-800 py-3 px-6 rounded-md hover:bg-yellow-600 transition duration-300 font-semibold">Enviar
+                        Mensagem</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2024 Elô Perfumaria. Todos os direitos reservados. <br> By Elismária LucenaS</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuMobileButton = document.getElementById('menu-mobile-button');
+        const menuMobile = document.getElementById('menu-mobile');
+
+        if (menuMobileButton && menuMobile) {
+            menuMobileButton.addEventListener('click', () => {
+                menuMobile.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
