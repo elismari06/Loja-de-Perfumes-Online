@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Perfumes Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Estilos adicionais podem ser colocados aqui */
+        .produto-imagem {
+            max-height: 200px;
+            /* Altura máxima para as imagens dos produtos */
+            object-fit: contain;
+            /* Garante que a imagem se ajuste dentro do contêiner */
+        }
+    </style>
+</head>
+
+<body>
+    <section id="carrinho" class="py-4 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-xl font-semibold text-gray-800 mb-2">Carrinho de Compras</h2>
+            <ul id="lista-carrinho" class="mt-2">
+                </ul>
+            <p class="text-gray-700 font-bold mt-4">Total: R$ <span id="total-carrinho">0.00</span></p>
+            <button href="site.html" id="finalizar-compra"
+                class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-300 mt-4">Finalizar
+                Compra</button>
+        </div>
+    </section>
+
+    <section id="produtos" class="bg-yellow-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Produtos Disponíveis</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-1">
+                    <img src="essencialatrai.jpg" alt="Perfume 1" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Essencial Atrai Deo Parfum Feminino
+                        100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 199,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="1" data-produto-nome="Natura Essencial Atrai Deo Parfum Feminino 100ml"
+                        data-produto-preco="199.99">Adicionar ao Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-2">
+                    <img src="essencialoud.jpg" alt="Perfume 2" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Oud Deo Parfum Feminino 100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 249,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="2" data-produto-nome="Essencial Oud Deo Parfum Feminino 100ml"
+                        data-produto-preco="249.99">Adicionar ao Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-3">
+                    <img src="essencialsentir.jpg" alt="Perfume 3" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Sentir Feminino Deo Parfum 100 Ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 179,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="3" data-produto-nome="Essencial Sentir Feminino Deo Parfum 100 Ml"
+                        data-produto-preco="179.99">Adicionar ao Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
+                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                        Carrinho</button>
+                </div>
+                </div><br>
+
+            <a href="site.html" class="hover:text-yellow-200 transition text-center duration-300">Home</a>
+            </li>
+
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botoesAdicionar = document.querySelectorAll('.adicionar-ao-carrinho');
+            const listaCarrinho = document.getElementById('lista-carrinho');
+            const totalCarrinho = document.getElementById('total-carrinho');
+            let carrinho = {}; // Usaremos um objeto para armazenar os itens do carrinho (id -> item)
+
+            botoesAdicionar.forEach(botao => {
+                botao.addEventListener('click', function() {
+                    const produtoId = this.dataset.produtoId;
+                    const produtoNome = this.dataset.produtoNome;
+                    const produtoPreco = parseFloat(this.dataset.produtoPreco);
+
+                    if (carrinho[produtoId]) {
+                        carrinho[produtoId].quantidade++;
+                        atualizarItemCarrinho(produtoId);
+                    } else {
+                        carrinho[produtoId] = {
+                            id: produtoId,
+                            nome: produtoNome,
+                            preco: produtoPreco,
+                            quantidade: 1
+                        };
+                        adicionarItemAoCarrinho(carrinho[produtoId]);
+                    }
+
+                    atualizarTotalCarrinho();
+                });
+            });
+
+            function adicionarItemAoCarrinho(item) {
+                const listItem = document.createElement('li');
+                listItem.classList.add('flex', 'items-center', 'justify-between', 'py-2', 'border-b', 'border-gray-200');
+                listItem.dataset.produtoId = item.id; // Armazenar o ID no elemento LI
+                listItem.innerHTML = `
+                    <span>${item.nome} (<span class="quantidade-item" data-produto-id="${item.id}">${item.quantidade}</span>)</span>
+                    <span>R$ <span class="preco-item" data-produto-id="${item.id}">${(item.preco * item.quantidade).toFixed(2)}</span></span>
+                    <button class="text-red-500 hover:text-red-700 focus:outline-none ml-2 remover-item" data-produto-id="${item.id}">Remover</button>
+                `;
+                listaCarrinho.appendChild(listItem);
+
+                // Adicionar event listener para remover o item (dentro da função para ter acesso ao listItem)
+                const botaoRemover = listItem.querySelector('.remover-item');
+                botaoRemover.addEventListener('click', function() {
+                    const idRemover = this.dataset.produtoId;
+                    delete carrinho[idRemover];
+                    listItem.remove();
+                    atualizarTotalCarrinho();
+                });
+            }
+
+            function atualizarItemCarrinho(produtoId) {
+                const itemCarrinho = carrinho[produtoId];
+                const quantidadeElement = listaCarrinho.querySelector(`.quantidade-item[data-produto-id="${produtoId}"]`);
+                const precoElement = listaCarrinho.querySelector(`.preco-item[data-produto-id="${produtoId}"]`);
+
+                if (quantidadeElement && precoElement) {
+                    quantidadeElement.textContent = itemCarrinho.quantidade;
+                    precoElement.textContent = (itemCarrinho.preco * itemCarrinho.quantidade).toFixed(2);
+                }
+            }
+
+            function atualizarTotalCarrinho() {
+                let valorTotal = 0;
+                for (const produtoId in carrinho) {
+                    valorTotal += carrinho[produtoId].preco * carrinho[produtoId].quantidade;
+                }
+                totalCarrinho.textContent = valorTotal.toFixed(2);
+            }
+            const finalizarCompraBotao = document.getElementById('finalizar-compra');
+            const seuNumeroWhatsApp = '+5589994603137'; // Substitua pelo seu número
+
+            finalizarCompraBotao.addEventListener('click', function() {
+                if (Object.keys(carrinho).length > 0) {
+                    const itensPedido = Object.values(carrinho)
+                        .map(item => `${item.nome} (x${item.quantidade}) - R$ ${(item.preco * item.quantidade).toFixed(2)}`)
+                        .join('\n');
+                    const totalPedido = totalCarrinho.textContent;
+                    const mensagemWhatsApp = `Olá! Gostaria de finalizar meu pedido:\n\n${itensPedido}\n\nTotal: R$ ${totalPedido}`;
+
+                    const linkWhatsApp = `https://wa.me/${+89994603137}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+
+                    window.open(linkWhatsApp, '_blank');
+                } else {
+                    alert('Seu carrinho está vazio. Adicione alguns produtos antes de finalizar a compra.');
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
