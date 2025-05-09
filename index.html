@@ -15,6 +15,39 @@
             object-fit: contain;
             /* Garante que a imagem se ajuste dentro do contêiner */
         }
+
+        .whatsapp-button {
+            display: flex;
+            /* Para alinhar o texto e a imagem horizontalmente */
+            align-items: center;
+            /* Para alinhar verticalmente ao centro */
+            justify-content: center;
+            /* Para centralizar o conteúdo dentro do botão */
+            padding: 10px 20px;
+            /* Ajuste o preenchimento conforme necessário */
+            border-radius: 5px;
+            /* Opcional: para deixar as bordas arredondadas */
+            background-color: #25D366;
+            /* Cor de fundo do WhatsApp */
+            color: rgb(0, 0, 0);
+            /* Cor do texto */
+            text-decoration: none;
+            /* Remove o sublinhado do link */
+            font-size: 16px;
+            /* Ajuste o tamanho da fonte conforme necessário */
+            width: fit-content;
+            /* Faz o botão se ajustar ao conteúdo */
+            margin: 20px auto;
+            /* Centraliza o botão horizontalmente e adiciona margem vertical */
+        }
+
+        .whatsapp-button img {
+            width: 24px;
+            /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+            margin-right: 10px;
+            /* Espaço entre a imagem e o texto */
+        }
     </style>
 </head>
 
@@ -27,7 +60,7 @@
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="produto.html" class="hover:text-yellow-200 transition duration-300">Produtos</a></li>
-                    <li><a href="#categorias" class="hover:text-yellow-200 transition duration-300">Categorias</a></li>
+                    <li><a href="#Marcas" class="hover:text-yellow-200 transition duration-300">Marcas</a></li>
                     <li><a href="#sobre" class="hover:text-yellow-200 transition duration-300">Sobre Nós</a></li>
                     <li><a href="https://w.app/ovebov" class="hover:text-yellow-200 transition duration-300">Contato</a>
                     </li>
@@ -101,29 +134,31 @@
 
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="essencialexclusivo.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Deo Parfum Essencial Exclusivo Masculino
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
                     <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
 
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="homemtradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Desodorante Colônia Homem Natura</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
                     <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
 
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="sabonetemacadamia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sabonete Vegetal Natura Tododia Macadâmia</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
                     <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
 
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="cremealgodao.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Hidratante Natura Tododia Algodão 400ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
                     <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
 
@@ -137,18 +172,18 @@
         </div>
     </section>
 
-    <section id="categorias" class="bg-yellow-100 py-16 px-4">
+    <section id="Marcas" class="bg-yellow-100 py-16 px-4">
         <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Categorias de Perfumes</h2>
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Marcas de Perfumes</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                    <h3 class="text-lg font-semibold text-gray-800">Perfumes Femininos</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">Natura</h3>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                    <h3 class="text-lg font-semibold text-gray-800">Perfumes Masculinos</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">Avon</h3>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
-                    <h3 class="text-lg font-semibold text-gray-800">Perfumes Unissex</h3>
+                    <h3 class="text-lg font-semibold text-gray-800">OBoticario</h3>
                 </div>
             </div>
         </div>
@@ -167,36 +202,15 @@
     </section>
 
     <section id="contato" class="bg-yellow-100 py-16 px-4">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Contato</h2>
-            <div class="bg-white rounded-lg shadow-md p-8">
-                <form>
-                    <div class="mb-4">
-                        <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome:</label>
-                        <input type="text" id="nome" name="nome"
-                            class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                        <input type="email" id="email" name="email"
-                            class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                    </div>
-                    <div class="mb-4">
-                        <label for="mensagem" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem"
-                            class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                    <a type="submit"
-                        class="bg-yellow-500 text-gray-800 py-3 px-6 rounded-md hover:bg-yellow-600 transition duration-300 font-semibold">Enviar
-                        Mensagem</a>
-                </form>
-            </div>
-        </div>
+        <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Contato</h2>
+        <a href="https://wa.me/5589994407647" class="whatsapp-button">
+              Clique aqui para entrar em contacto!
+        </a>
     </section>
 
     <footer class="bg-gray-800 text-white py-4">
         <div class="container mx-auto text-center text-sm">
-            <p>&copy; 2024 Elô Perfumaria. Todos os direitos reservados. <br> By Elismária LucenaS</p>
+            <p>&copy; 2025 Elô Perfumaria. Todos os direitos reservados. <br> By Elismária Lucena</p>
         </div>
     </footer>
 
