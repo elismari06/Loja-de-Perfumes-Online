@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Perfumes Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <style>
+        /* Estilos adicionais podem ser colocados aqui */
+        .produto-imagem {
+            max-height: 200px;
+            /* Altura máxima para as imagens dos produtos */
+            object-fit: contain;
+            /* Garante que a imagem se ajuste dentro do contêiner */
+        }
+
+        .whatsapp-button {
+            display: flex;
+            /* Para alinhar o texto e a imagem horizontalmente */
+            align-items: center;
+            /* Para alinhar verticalmente ao centro */
+            justify-content: center;
+            /* Para centralizar o conteúdo dentro do botão */
+            padding: 10px 20px;
+            /* Ajuste o preenchimento conforme necessário */
+            border-radius: 5px;
+            /* Opcional: para deixar as bordas arredondadas */
+            background-color: #25D366;
+            /* Cor de fundo do WhatsApp */
+            color: rgb(0, 0, 0);
+            /* Cor do texto */
+            text-decoration: none;
+            /* Remove o sublinhado do link */
+            font-size: 16px;
+            /* Ajuste o tamanho da fonte conforme necessário */
+            width: fit-content;
+            /* Faz o botão se ajustar ao conteúdo */
+            margin: 20px auto;
+            /* Centraliza o botão horizontalmente e adiciona margem vertical */
+        }
+
+        .whatsapp-button img {
+            width: 24px;
+            /* Ajuste o tamanho da imagem conforme necessário */
+            height: auto;
+            margin-right: 10px;
+            /* Espaço entre a imagem e o texto */
+        }
+    </style>
+</head>
+
+<body class="bg-yellow-50 font-inter">
+    <header class="bg-yellow-400 text-gray-800 py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold">
+                <span class="bg-white text-yellow-400 px-2 rounded-md">Elô</span> Perfumaria
+            </a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="produto.html" class="hover:text-yellow-200 transition duration-300">Produtos</a></li>
+                    <li><a href="#Marcas" class="hover:text-yellow-200 transition duration-300">Marcas</a></li>
+                    <li><a href="#sobre" class="hover:text-yellow-200 transition duration-300">Sobre Nós</a></li>
+                    <li><a href="https://w.app/ovebov" class="hover:text-yellow-200 transition duration-300">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-mobile-button" class="text-gray-800 focus:outline-none" aria-label="Abrir Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+                <div id="menu-mobile"
+                    class="hidden absolute top-16 right-0 bg-yellow-400 shadow-lg rounded-md py-2 px-4 space-y-3">
+                    <a href="#produtos"
+                        class="block text-gray-800 hover:text-yellow-200 transition duration-300">Produtos</a>
+                    <a href="#categorias"
+                        class="block text-gray-800 hover:text-yellow-200 transition duration-300">Categorias</a>
+                    <a href="#sobre" class="block text-gray-800 hover:text-yellow-200 transition duration-300">Sobre
+                        Nós</a>
+                    <a href="#contato"
+                        class="block text-gray-800 hover:text-yellow-200 transition duration-300">Contato</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-br from-yellow-100 to-orange-100 text-gray-800 py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Encontre o Perfume Perfeito</h2>
+            <p class="text-lg mb-8">Descubra fragrâncias exclusivas que realçam a sua personalidade.</p>
+            <a href="produto.html"
+                class="bg-yellow-500 text-gray-800 py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300 font-semibold">Ver
+                Produtos</a>
+        </div>
+    </section>
+
+    <section id="produtos" class="bg-yellow-50 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Produtos em Destaque</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialatrai.jpg" alt="Perfume 1" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Atrai Deo Parfum Feminino
+                        100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialoud.jpg" alt="Perfume 2" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Oud Deo Parfum Feminino 100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialsentir.jpg" alt="Perfume 3" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Sentir Feminino Deo Parfum 100ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 324,00</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="essencialexclusivo.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Deo Parfum Essencial Exclusivo Masculino 100ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+
+                </div>
+               <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="kaiaktradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Kaiak Tradicional Deo Colônia Masculino 100ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 185,90</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="sabonetemacadamia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sabonete Vegetal Natura Tododia Macadâmia 5
+                        unidades 90g</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 32,90</p>
+
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
+                    <img src="cremealgodao.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Hidratante Natura Tododia Algodão 400ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 72,90</p>
+
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="produto.html"
+                    class="text-yellow-600 hover:text-yellow-800 transition duration-300 font-semibold">Ver Todos os
+                    Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Marcas" class="bg-yellow-100 py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Marcas de Perfumes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">Natura</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">Avon</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-center">
+                    <h3 class="text-lg font-semibold text-gray-800">OBoticario</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="bg-yellow-50 py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold text-yellow-700 mb-4">Sobre Nós</h2>
+            <p class="text-gray-700 text-lg">
+                Bem-vindo à Elô Perfumaria, sua loja online de perfumes. Nossa missão é oferecer uma seleção
+                exclusiva de fragrâncias de alta qualidade e nacionais, para todos os gostos e estilos.
+                Com anos de experiência no mercado, nos dedicamos a proporcionar uma experiência de compra
+                excepcional, desde a escolha do produto até a entrega em sua casa.
+            </p>
+        </div>
+    </section>
+
+    <section id="contato" class="bg-yellow-100 py-16 px-4">
+        <h2 class="text-2xl font-semibold text-center mb-8 text-yellow-700">Contato</h2>
+        <a href="https://wa.me/5589994407647" class="whatsapp-button">
+              Clique aqui para entrar em contacto</a>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Elô Perfumaria. Todos os direitos reservados. <br> By Elismária Lucena</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuMobileButton = document.getElementById('menu-mobile-button');
+        const menuMobile = document.getElementById('menu-mobile');
+
+        if (menuMobileButton && menuMobile) {
+            menuMobileButton.addEventListener('click', () => {
+                menuMobile.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+
+</html>
