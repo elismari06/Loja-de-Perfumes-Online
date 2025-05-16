@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Perfumes Online</title>
+    <link rel="stylesheet" href="BD.php">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
     <style>
@@ -23,7 +24,7 @@
         <div class="container mx-auto">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Carrinho de Compras</h2>
             <ul id="lista-carrinho" class="mt-2">
-                </ul>
+            </ul>
             <p class="text-gray-700 font-bold mt-4">Total: R$ <span id="total-carrinho">0.00</span></p>
             <button href="index.html" id="finalizar-compra"
                 class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-300 mt-4">Finalizar
@@ -37,367 +38,506 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-1">
                     <img src="essencialatrai.jpg" alt="Perfume 1" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Essencial Atrai Deo Parfum Feminino
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Atrai Deo Parfum Feminino
                         100ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 199,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
                         data-produto-id="1" data-produto-nome="Natura Essencial Atrai Deo Parfum Feminino 100ml"
-                        data-produto-preco="199.99">Adicionar ao Carrinho</button>
+                        data-produto-preco="278,90">Adicionar ao Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-2">
                     <img src="essencialoud.jpg" alt="Perfume 2" class="produto-imagem rounded-md mb-4">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Oud Deo Parfum Feminino 100ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 249,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
                         data-produto-id="2" data-produto-nome="Essencial Oud Deo Parfum Feminino 100ml"
-                        data-produto-preco="249.99">Adicionar ao Carrinho</button>
+                        data-produto-preco="278,90">Adicionar ao Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-3">
                     <img src="essencialsentir.jpg" alt="Perfume 3" class="produto-imagem rounded-md mb-4">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Sentir Feminino Deo Parfum 100ml
                     </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 179,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
                         data-produto-id="3" data-produto-nome="Essencial Sentir Feminino Deo Parfum 100 Ml"
-                        data-produto-preco="179.99">Adicionar ao Carrinho</button>
+                        data-produto-preco="278,90">Adicionar ao Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
                     <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-          
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="primeirohumor.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Meu Primeiro Humor Deo Colônia Feminino 75 Ml Natura</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 324,00</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml"
+                        data-produto-preco="324,00">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="unaartisan.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Una Artisan 75 ml</h3>
+                    <img src="essencialatraimasculino.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Essencial Atrai Masculino 100ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Essencial Atrai Masculino 100ml"
+                        data-produto-preco="278,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="nectarmaracuja.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Néctar para as Mãos Ekos Maracujá 40 g</h3>
+                    <img src="essencialexclusivo.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Body Splash Natura Tododia Macadâmia 200mlEssencial Atrai Masculino 100ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 278,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Essencial Atrai Masculino 100ml"
+                        data-produto-preco="278,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="cremelimaosiciliano.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Hifratante Natura Tododia Limão Siciliano E Flor De Gardênia</h3>
+                    <img src="kaiaktradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Kaiak Tradicional Deo Colônia Masculino 100ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 185,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Kaiak Tradicional Deo Colônia Masculino 100ml"
+                        data-produto-preco="185,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="bodysplahmacadamia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Body Splash Natura Tododia Macadâmia 200ml</h3>
+                    <img src="kaiakpulso.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Kaiak Pulso Desodorante Colônia Masculino 100ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="unatradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Deo Parfum Una Tradicional Feminino 75ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="refilalgodao.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Creme Noturno Para o Corpo Tododia Todanoite 400ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="maçaverde.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Shampoo E Condicionador Natura Maçã Verde Aloe Vera Tododia</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="sabonetemacadamia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sabonete Vegetal Natura Tododia Macadâmia</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 185,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Kaiak Pulso Desodorante Colônia Masculino 100ml"
+                        data-produto-preco="185,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
                     <img src="homemtradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Desodorante Colônia Homem Natura</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 198,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Desodorante Colônia Homem Natura"
+                        data-produto-preco="198,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="unatradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Deo Parfum Una Tradicional Feminino 75ml
+                    </h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 312,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome=">Deo Parfum Una Tradicional Feminino 75ml"
+                        data-produto-preco="312,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="unaartisan.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Una Artisan 75ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 312,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Una Artisan 75ml"
+                        data-produto-preco="312,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="primeirohumor.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Meu Primeiro Humor Deo Colônia Feminino 75ml
+                        Natura</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 153,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Meu Primeiro Humor Deo Colônia Feminino 75ml"
+                        data-produto-preco="153,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilbiografiafeminino.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Desodorante Feminino Corporal Biografia
+                        Natura 100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 38,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Desodorante Feminino Corporal Biografia
+                        Natura 100ml"
+                        data-produto-preco="38.90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilbiografiamasculino.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Desodorante Corporal Natura Biografia
+                        Masculino 100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 38,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Desodorante Corporal Natura Biografia
+                        Masculino 100ml"
+                        data-produto-preco="38.90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilhomemtradicional.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Deo Corporal Desodorante Natura Homem
+                        100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 38,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Deo Corporal Desodorante Natura Homem
+                        100ml"
+                        data-produto-preco="38,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilervadoce.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Deo Corporal Erva Doce Natura 100ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 38,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Deo Corporal Erva Doce Natura 100ml"
+                        data-produto-preco="38,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="cerejanegra.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Body Splash Tododia Cereja Negra e Praliné 200
+                        ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 83,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Body Splash Tododia Cereja Negra e Praliné 200
+                        ml"
+                        data-produto-preco="83.90">Adicionar ao
+                        Carrinho</button>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="bodysplashtamaraecanela.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Body Splash Colônia Tododia Tâmara e Canela
+                        200ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 83,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Body Splash Colônia Tododia Tâmara e Canela
+                        200ml"
+                        data-produto-preco="83.90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="cremelimaosiciliano.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Natura Tododia Limão Siciliano E Flor De
+                        Gardênia</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 72,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Creme Natura Tododia Limão Siciliano E Flor De
+                        Gardênia"
+                        data-produto-preco="72,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="cerejanegrapraline.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Nutritivo Cereja Negra E Praliné Tododia
+                        400m</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 72,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Creme Nutritivo Cereja Negra E Praliné Tododia
+                        400m"
+                        data-produto-preco="72,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
                     <img src="cremealgodao.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Hidratante Natura Tododia Algodão 400ml</h3>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Hidratante Natura Tododia Algodão 400ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 72,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Creme Hidratante Natura Tododia Algodão 400ml"
+                        data-produto-preco="72,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="biografiainspire.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Biografia Inspire Natura Colônia Masculino</h3>
+                    <img src="cremejamborosaeflordecaju.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Natura Tododia Jambo Rosa e Flor de Caju
+                        400ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 72,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Creme Natura Tododia Jambo Rosa e Flor de Caju
+                        400ml"
+                        data-produto-preco="72,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="ilia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Deo Parfum Ilía Secreto Feminino</h3>
+                    <img src="cremecerejaeavela.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Hidratante Corporal Natura Tododia Cereja E
+                        Avelã 400ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 72,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Hidratante Corporal Natura Tododia Cereja E
+                        Avelã 400ml"
+                        data-produto-preco="72,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilcerejanegra.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil hidratante Tododia cereja negra e praliné
+                        400ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 53,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil hidratante Tododia cereja negra e praliné
+                        400ml"
+                        data-produto-preco="53,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="refilmacadamia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Creme Desodorante Nutritivo Corporal
+                        Tododia Macadâmia 400ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 53,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Creme Desodorante Nutritivo Corporal
+                        Tododia Macadâmia 400ml"
+                        data-produto-preco="53,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refiljamborosa.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Hidratante Tododia Jambo Rosa Flor De
+                        Caju 400ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 53,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Hidratante Tododia Jambo Rosa Flor De
+                        Caju 400ml"
+                        data-produto-preco="53,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilcerejaeavela.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Creme Desodorante Nutritivo para o Corpo
+                        Tododia Cereja e Avelã 400 ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 53,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Creme Desodorante Nutritivo para o Corpo
+                        Tododia Cereja e Avelã 400 ml"
+                        data-produto-preco="53,90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="refilnozpecan.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refill Hidratante Tododia Noz Pecã e Cacau
+                        400ml</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 53,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refill Hidratante Tododia Noz Pecã e Cacau
+                        400ml"
+                        data-produto-preco="53,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="refilacerolaehibisco.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Refil Hidratante Tododia Corporal Acerola E
+                        Hibisco 400ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 53,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Refil Hidratante Tododia Corporal Acerola E
+                        Hibisco 400ml"
+                        data-produto-preco="53,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="saboneteamoravermelhaejabuticaba.jpg" alt="Perfume 4"
+                        class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sabonete em barra Tododia Amora Vermelha e
+                        Jaboticaba caixa 5 unidades</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 32,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Sabonete em barra Tododia Amora Vermelha e
+                        Jaboticaba caixa 5 unidades"
+                        data-produto-preco="32,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="sabonetemacadamia.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sabonete Vegetal Natura Tododia Macadâmia 5 unidades</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 32,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Sabonete Vegetal Natura Tododia Macadâmia 5 unidades"
+                        data-produto-preco="32,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="caixadesabonetecomcarinho.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Presente Natura Tododia Sabonetes Sortidos Amor
+                        E Carinho 05 unidades</h3>
+                    <p class="text-gray-600 mb-2">Marca: Natura</p>
+                    <p class="text-gray-700 font-bold mb-2">R$ 39,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Presente Natura Tododia Sabonetes Sortidos Amor
+                        E Carinho 05 unidades"
+                        data-produto-preco="39.90">Adicionar ao
+                        Carrinho</button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
+                    <img src="saboneteromaeamora.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Sabonete Em Barra Tododia Romã E Flor De Amora
+                        90g</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
                     <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Sabonete Em Barra Tododia Romã E Flor De Amora
+                        90g"
+                        data-produto-preco="299.99">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="desodorantecerejaeavelan.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Desodorante Antitranspirante em Creme Tododia
+                        Cereja e Avelã 80g</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 30,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Desodorante Antitranspirante em Creme Tododia
+                        Cereja e Avelã 80g"
+                        data-produto-preco="30,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="multifuncinalhomemelo.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Creme Multifuncional Homem ELO Pré E
+                        Pós-barba 75ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 69,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Creme Multifuncional Homem ELO Pré E
+                        Pós-barba 75ml"
+                        data-produto-preco="69,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="shampookaiak.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Shampoo Cabelo e Corpo Kaiak Masculino 125ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 36,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Shampoo Cabelo e Corpo Kaiak Masculino 125ml"
+                        data-produto-preco="36,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="aguadecoloniamamaebebe.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Água de Colônia Relaxante Mamãe e Bebê 50ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
                     <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Água de Colônia Relaxante Mamãe e Bebê 50ml"
+                        data-produto-preco="299.99">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="aguadecoloniamamaebebe.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Água de Colônia Relaxante Mamãe e Bebê 100ml
+                    </h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 103,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Água de Colônia Relaxante Mamãe e Bebê 100ml"
+                        data-produto-preco="299.99">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="lencoumidecidomamaebebe.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Lenços Umedecidos Mamãe e Bebê Natura 16
+                        unidades</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 31,90</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Lenços Umedecidos Mamãe e Bebê Natura 16
+                        unidades"
+                        data-produto-preco="31,90">Adicionar ao
                         Carrinho</button>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
+                    <img src="protetorantioliosidadefps30.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Chronos Protetor Antioleosidade Redutor Poros
+                        30 FPS 50ml</h3>
                     <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
+                    <p class="text-gray-700 font-bold mb-2">R$ 99,00</p>
+                    <button
+                        class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
+                        data-produto-id="4" data-produto-nome="Chronos Protetor Antioleosidade Redutor Poros
+                        30 FPS 50ml"
+                        data-produto-preco="99,00">Adicionar ao
                         Carrinho</button>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div><div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between" id="produto-4">
-                    <img src="aura.jpg" alt="Perfume 4" class="produto-imagem rounded-md mb-4">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Natura Aura Alba 75 ml</h3>
-                    <p class="text-gray-600 mb-2">Marca: Natura</p>
-                    <p class="text-gray-700 font-bold mb-2">R$ 299,99</p>
-                    <button class="bg-yellow-500 text-gray-800 py-2 rounded-md hover:bg-yellow-600 transition duration-300 text-sm adicionar-ao-carrinho"
-                        data-produto-id="4" data-produto-nome="Natura Aura Alba 75 ml" data-produto-preco="299.99">Adicionar ao
-                        Carrinho</button>
-                </div>
-                </div><br>
+            </div><br>
 
             <a href="index.html" class="hover:text-yellow-200 transition text-center duration-300">Home</a>
             </li>
@@ -405,14 +545,14 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const botoesAdicionar = document.querySelectorAll('.adicionar-ao-carrinho');
             const listaCarrinho = document.getElementById('lista-carrinho');
             const totalCarrinho = document.getElementById('total-carrinho');
             let carrinho = {}; // Usaremos um objeto para armazenar os itens do carrinho (id -> item)
 
             botoesAdicionar.forEach(botao => {
-                botao.addEventListener('click', function() {
+                botao.addEventListener('click', function () {
                     const produtoId = this.dataset.produtoId;
                     const produtoNome = this.dataset.produtoNome;
                     const produtoPreco = parseFloat(this.dataset.produtoPreco);
@@ -447,7 +587,7 @@
 
                 // Adicionar event listener para remover o item (dentro da função para ter acesso ao listItem)
                 const botaoRemover = listItem.querySelector('.remover-item');
-                botaoRemover.addEventListener('click', function() {
+                botaoRemover.addEventListener('click', function () {
                     const idRemover = this.dataset.produtoId;
                     delete carrinho[idRemover];
                     listItem.remove();
@@ -476,7 +616,7 @@
             const finalizarCompraBotao = document.getElementById('finalizar-compra');
             const seuNumeroWhatsApp = '+5589994407647'; // Substitua pelo seu número
 
-            finalizarCompraBotao.addEventListener('click', function() {
+            finalizarCompraBotao.addEventListener('click', function () {
                 if (Object.keys(carrinho).length > 0) {
                     const itensPedido = Object.values(carrinho)
                         .map(item => `${item.nome} (x${item.quantidade}) - R$ ${(item.preco * item.quantidade).toFixed(2)}`)
